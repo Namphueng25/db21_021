@@ -1,22 +1,19 @@
 <?php
 $controllers = array('pages'=>['home','error']);
 
+function call($controllers,$action){
+
+}
 if(array_key_exists($controller,$controllers))
 {
-     if(in_array($action,$controllers[$controller]))
-     {
-            call($controller.$action);
-
-     }
-     else 
-     {
-            call('pages','error');
-
-     }
+    if(in_array($action,$controllers[$controller]))
+        call($controller,$action);
+     else
+        call('pages','error');
+    
 }
-else
+else 
 {
-            call('pages','error');
-
+    call('pages','error');
 }
 ?>
