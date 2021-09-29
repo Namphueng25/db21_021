@@ -2,7 +2,7 @@
 $controllers = array('pages'=>['home','error']);
 
 function call($controllers,$action){
-
+           echo "routes to".$controller."-".$action."<br>";
 }
 if(array_key_exists($controller,$controllers))
 {
