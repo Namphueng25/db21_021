@@ -3,7 +3,14 @@ $controllers = array('pages'=>['home','error']);
 
 function call($controllers,$action){
            echo "<br/>";
-           echo "routes to".$controller."-".$action."<br/>";
+           require_once("controllers/".$controller."_controller");
+           switch($controller)
+           {
+                case "pages":  $controller  =    new PagesController();
+                                break;
+
+           }
+           $controller->{$action}();
 }
 if(array_key_exists($controller,$controllers))
 {
