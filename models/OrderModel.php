@@ -1,12 +1,12 @@
 <?php 
-class Order
+class order
 {
-    public $id
-    public $date
-    public $ID_Customer
-    public $ID_Staff
-    public $Condition
-    public $Conform
+    public $id;
+    public $date;
+    public $ID_Customer;
+    public $ID_Staff;
+    public $Condition;
+    public $Conform;
 
     public function__construct($id,$date,$ID_Customer,$ID_Staff,$Condition,$Conform)
     {
@@ -30,7 +30,7 @@ class Order
             $Condition = $my_row[condition];
             $Conform = $my_row[เงื่อนไข];
             require("connection_close.php");
-            return new Order($id,$date,$ID_Customer,$ID_Staff,$Condition,$Conform);
+            return new order($id,$date,$ID_Customer,$ID_Staff,$Condition,$Conform);
     }
     public static function getAll()
     {
@@ -46,7 +46,7 @@ class Order
                 $ID_Staff = $my_row[Staff_id];
                 $Condition = $my_row[condition];
                 $Conform = $my_row[เงื่อนไข];
-                $OrderList[] = new Order($id,$date,$ID_Customer,$ID_Staff,$Condition,$Conform);                
+                $OrderList[] = new order($id,$date,$ID_Customer,$ID_Staff,$Condition,$Conform);                
             }
             require("connection_close.php");
 
