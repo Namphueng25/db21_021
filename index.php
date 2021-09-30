@@ -12,7 +12,13 @@ if(isset($_GET['controller'])&&isset($GET['action']))
     <head></head>
     <body>
         <?php echo "controller= ".$controller.",action=".$action;?>
-        <br>[<a href="">home</a>]
+        <br>[<a href="?controller=pages&action=home">Home</a>]
+            [<a href="">order</a>]
+            [<a href="">detaillorder</a>]
+        
+        
+        
+        <br>
         
         <?php require_once("routes.php");?>
     </body>
