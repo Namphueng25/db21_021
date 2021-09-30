@@ -1,5 +1,5 @@
 <?php
-$controllers = array('pages'=>['home','error']);
+$controllers = array('pages'=>['home','error'],'order'=>['index']);
 
 function call($controllers,$action){
            echo "<br/>";
@@ -8,6 +8,10 @@ function call($controllers,$action){
            {
                 case "pages":  $controller  =    new PagesController();
                                 break;
+                
+                case "order":  require_once("models/OrderModel.php");
+                                $controller = new OrderController();
+                                break; 
 
            }
            $controller->{$action}();
