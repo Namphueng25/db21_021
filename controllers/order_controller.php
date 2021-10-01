@@ -9,7 +9,12 @@
         $customer_List=customer::getAll();
         require_once('./views/order/newOrder.php');
     }
-
+    public function search()
+    {
+        $key = $_GET['key'];
+        $order_List = Order::seach($key);
+        require_once("./views/order/index_order.php");
+    }
 
 
 
