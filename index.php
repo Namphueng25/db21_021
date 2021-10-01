@@ -1,5 +1,5 @@
 <?php
-if(isset($_GET['controller'])&&isset($GET['action']))
+if(isset($_GET['controller'])&&isset($_GET['action']))
 {
     $controller = $_GET['controller'];
     $action = $_GET['action'];
@@ -12,14 +12,11 @@ if(isset($_GET['controller'])&&isset($GET['action']))
     <head></head>
     <body>
         <?php echo "controller= ".$controller.",action=".$action;?>
-        <br>[<a href="?controller=pages&action=home">Home</a>]
-            [<a href="?controller=order&action=index">Order</a>]
-            [<a href="">detaillorder</a>]
-        
-        
-        
-        <br>
-        
+        <br>[<a href="?controller=pages&action=home">home</a>]
+        [<a href="?controller=order&action=index">order</a>]
+      [<a href="">Detail_order</a>]
+    
+         
         <?php require_once("./routes.php");?>
     </body>
 </html>
