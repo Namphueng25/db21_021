@@ -12,7 +12,7 @@
     public function search()
     {
         $key = $_GET['key'];
-        $order_List = Order::seach($key);
+        $order_List = Order::search($key);
         require_once("./views/order/index_order.php");
     }
 
