@@ -2,8 +2,8 @@
 {
         public function index()
         {
-            $order_list = Order::getAll();
-            require_once("views/order/index_order.php");
+            $order_List = Order::getAll();
+            require_once("./views/order/index_order.php");
         }
 
 
