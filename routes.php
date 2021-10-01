@@ -1,5 +1,5 @@
 <?php
-$controllers = array('pages'=>['home','error'],'order'=>['index','newOrder']);
+$controllers = array('pages'=>['home','error'],'order'=>['index','newOrder'],'detailOrder'=>['index']);
 
 function call($controller,$action){
     require_once("./controllers/".$controller."_controller.php");
@@ -13,6 +13,12 @@ function call($controller,$action){
                    
                         $controller = new OrderController();
                         break;
+                        
+        case "detailOrder":   require_once("./models/detailOrder.php");
+                   
+                        $controller = new detailOrderController();
+                        break;
+
 
     }
     $controller->{$action}();
