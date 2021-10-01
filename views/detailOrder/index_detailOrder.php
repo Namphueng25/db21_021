@@ -1,5 +1,12 @@
 <table border=1>
 new detailOrder <a href=?controller=detailOrder&action=newdetailOrder> click</a><br>
+
+<form method="get" action="">
+        <input type="text" name="key">
+        <input type="hidden" name="controller" value="detailOrder" />
+        <button type="submit" name="action" value="search"> Search </button>
+    </form>
+
 <tr><td>date</td>
     <td>con_payment</td>
     <td>เงื่อนไข</td>
