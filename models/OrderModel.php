@@ -1,57 +1,46 @@
-<?php 
-class order
-{
-    public $id;
-    public $date;
-    public $ID_Customer;
-    public $ID_Staff;
-    public $Condition;
-    public $Conform;
+<?php class Order{
+     public $id_order;
+     public $date;
+     public $condition;
+     public $id_cus;
+     public $Staff_id;
+     public $เงื่อนไข;
 
-    public function__construct($id,$date,$ID_Customer,$ID_Staff,$Condition,$Conform)
+
+    public function __construct($id_order,$date,$condition,$id_cus,$Staff_id,$เงื่อนไข)
     {
-             $this->id = $id;
-             $this->date = $date;
-             $this->ID_Customer = $ID_Customer;
-             $this->ID_Staff = $ID_Staff;
-             $this->Condition = $Condition;
-             $this->Conform = $Conform;
-    }
-    public static function get($id)
-    {
-            require("connection_connect.php");
-            $sql = "SELECT * FROM customer_order WHERE id_order='$id' ";
-            $result = $conn->query($sql);
-            $my_row = $result->fetch_assoc();
-            $id = $my_row[id_order];
-            $date = $my_row[date];
-            $ID_Customer = $my_row[id_cus];
-            $ID_Staff = $my_row[Staff_id];
-            $Condition = $my_row[condition];
-            $Conform = $my_row[เงื่อนไข];
-            require("connection_close.php");
-            return new order($id,$date,$ID_Customer,$ID_Staff,$Condition,$Conform);
+        $this->id_order = $id_order;
+        $this->date = $date;
+        $this->condition = $condition;
+        $this->id_cus = $id_cus;
+        $this->Staff_id = $Staff_id;
+        $this->เงื่อนไข = $เงื่อนไข;
     }
     public static function getAll()
     {
-            $OrderList = [];
-            require("connection_connect.php");
-            $sql="SELECT * FROM customer_order";
-            $result=$conn->query($sql);
-            while($my_row = $result->fetch_assoc())
-            {
-                $id = $my_row[id_order];
-                $date = $my_row[date];
-                $ID_Customer = $my_row[id_cus];
-                $ID_Staff = $my_row[Staff_id];
-                $Condition = $my_row[condition];
-                $Conform = $my_row[เงื่อนไข];
-                $OrderList[] = new order($id,$date,$ID_Customer,$ID_Staff,$Condition,$Conform);                
-            }
-            require("connection_close.php");
+        $orderList=[];
+        require("connection_connect.php");
+        $sql="SELECT * FROM customer_order ";
+        $result=$conn->query($sql);
+        while($my_row=$result->fetch_assoc())
+        {
+            $id_order = $my_row[id_order];
+            $date = $my_row[date];
+            $condition = $my_row[condition ];
+            $id_cus = $my_row[id_cus];
+            $Staff_id = $my_row[Staff_id];
+            $เงื่อนไข = $my_row[เงื่อนไข];
+            
+            $orderList[] = new Order($id_order,$date,$condition,$id_cus,$Staff_id,$เงื่อนไข);
+        }
+        require("connection_close.php");
+        return $orderList;
 
-            return $OrderList;
     }
-    
 
-}?>
+
+
+
+}
+
+?>
