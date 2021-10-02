@@ -16,7 +16,10 @@ new order <a href=?controller=order&action=newOrder> click</a><br>
         <td>$order->id_cus</td>
         <td>$order->Staff_id</td>
         <td>$order->เงื่อนไข</td>
-        <td>update</td><td>delete</td></tr>";
+        <td>update</td>
+        <td><a href=?controller=order&action=deleteConform&id_order=$order->id_order>Delete</a></td>
+        </tr>";
+
 }
 echo "</table>";
 ?>
