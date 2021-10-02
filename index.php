@@ -3,6 +3,7 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
 {
     $controller = $_GET['controller'];
     $action = $_GET['action'];
+
 }else
 {
     $controller = 'pages';
@@ -14,7 +15,7 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
         <?php echo "controller= ".$controller.",action=".$action;?>
         <br>[<a href="?controller=pages&action=home">home</a>]
         [<a href="?controller=order&action=index">order</a>]
-      [<a href="?controller=detailOrder&action=index">detailOrder</a>]
+      [<a href="?controller=detailOrder&action=index">detailOrder</a>]<br>
     
          
         <?php require_once("./routes.php");?>
