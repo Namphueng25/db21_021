@@ -1,7 +1,11 @@
 <?php
+<<<<<<< HEAD
 $controllers = array('pages'=>['home','error'],
                         'order'=>['index','newOrder','search'],
                         'detailOrder'=>['index','search']);
+=======
+$controllers = array('pages'=>['home','error'],'order'=>['index','newOrder','search'],'detailOrder'=>['index','search','updateForm','update']);
+>>>>>>> 27027cc524ccfe8534464242412751fb08e90239
 
 function call($controller,$action){
     require_once("./controllers/".$controller."_controller.php");
