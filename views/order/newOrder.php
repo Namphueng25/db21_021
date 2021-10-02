@@ -1,27 +1,29 @@
+<form method = "GET" action = "">
 
-<form method="get" action="">
-<label>รหัส <input type="text" name="id_order"/></label><br>
-<label>วันที่ <input type="text" name="date"/></label><br>
-<label>ชื่อพนักงาน <select name="s_name">
-    <?php foreach($staff_List as $sta)
-     {
-         echo "<option value = $sta->s_id>$sta->s_name</option>";
-     }
-    ?>
+    <label>เลขใบสั่งซื้อ  <input type="text" name="id"/></label><br>
+
+    <label>วันที่ทำการสั่งซื้อ  <input type="date" name="date" value="<?php echo date("Y-m-d");?>"/></label><br>
+    
+    <label>รหัสพนักงาน   <select name="s_id">
+    <?php foreach($staff_List as $s)
+    {
+        echo "<option value=$s->id > $s->id</option>";
+    }?>
     </select></label><br>
 
-<label>ชื่อลูกค้า <select name="c_Fname">
-    <?php foreach($customer_List as $cus) 
+    <label>รหัสลูกค้า  <select name="c_id">
+    <?php foreach($customer_id as $c)
     {
-        echo "<option value = $cus->c_id>$cus->c_Fname</option>"; 
+        echo "<option value=$c->id > $c->id</option>";
+    }?>
+    </select></label><br>
 
-    }
-    ?>
-</select></label><br>
+    <label>เการรออนุมัติ  <input type="text" name="เงื่อนไข"/></label><br>
+    
+    <label>เปอร์เซ็นต์มัดจำ   <input type="number" name="condition"/></label><br>
 
-
-<input type="hidden"name="controller"value="order"/>
-<button type= "submit"name="action"value="index">back</button>
-<button type= "submit"name="action"value="addOrder">Save</button>
-
+    <input type="hidden" name="controller" value="order"/><br>
+    <button type="submit" name="action" value="index">Back</button>
+    <button type="submit" name="action" value="addOrder">Save</button>
+</form>
 
