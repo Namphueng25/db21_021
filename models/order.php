@@ -39,31 +39,8 @@
 
     }
 
-    public static function search($key)
-    {
-        require("connect_database.php");
-        $sql="SELECT * FROM customer_order  WHERE (id_order like '%$key%' or Staff_id like '%$key%' or condition like '%$key%' or id_cus like '%$key%')and CUS_ID=CUS_ID";
-        $result=$conn->query($sql);
-        while($my_row=$result->fetch_assoc())
-        {
-            $id_order = $my_row[id_order];
-            $date = $my_row[date];
-            $condition = $my_row[condition ];
-            $id_cus = $my_row[id_cus];
-            $Staff_id = $my_row[Staff_id];
-            $เงื่อนไข = $my_row[เงื่อนไข];
-            $orderList[] = new Order($id_order,$date,$condition,$id_cus,$Staff_id,$เงื่อนไข);
-        }
-        require("connection_close.php");
-        return $orderList;
-
-    }
-
-
-
 
 
 
 }
 
-?>
