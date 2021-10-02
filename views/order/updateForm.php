@@ -8,13 +8,11 @@
         value="<?php echo $order->condition;?>"/></label><br>
 
 
-<label>ชื่อลูกค้า <select name="c_id">
-    <?php foreach($customerList as $c) {
-        echo "<option value = $c->id";
-        if($c->id==$order->c_id){echo " selected='selected'";}
-         echo ">$c->name</option>";}
+ <br><label>ชื่อลูกค้า <select name="c_id">
+    <?php foreach($customerList as $C) {echo "<option value = $C->c_id>
+    $C->c_Fname</option>";}
     ?>
-    </select></label><br> 
+    </select></label><br>
     
 <label>ชื่อพนักงาน <select name="s_id">
     <?php foreach($staffList as $s) {
