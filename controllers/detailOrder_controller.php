@@ -18,7 +18,19 @@
        
         require_once("./views/detailOrder/updateForm.php");
     }
-
+    public function update()
+    {
+        $date = $_GET['date'];
+        $no1 = $_GET['no1'];
+        $n_pid = $_GET['n_pid'];
+        $เงื่อนไข = $_GET['เงื่อนไข'];
+        $con_payment = $_GET['con_payment'];
+        $n_staff = $_GET['n_staff'];
+        $n_customer = $_GET['n_customer'];
+        detailOrder::update($date,$no1,$n_pid,$เงื่อนไข,$con_payment,$n_staff,$n_customer);
+        detailOrderController::index();
+        
+    }
 
 
 
