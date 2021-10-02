@@ -54,7 +54,7 @@
     public static function search($key)
     {
         require("connect_database.php");
-        $sql="SELECT * FROM ใบเสนอ  WHERE ( stock_id1 like '%$key%' or n_staff like '%$key%' or n_customer like '%$key%' or n_pid like '%$key%' or no1 like '%$key%')and CUS_ID=CUS_ID";
+        $sql="SELECT * FROM ใบเสนอ  WHERE ( stock_id1 like '%$key%' or n_staff like '%$key%' or n_customer like '%$key%' or n_pid like '%$key%' or no1 like '%$key%')";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
@@ -75,6 +75,28 @@
         require("connection_close.php");
         return $detailOrder_List;
 
+    }
+    public static function get($id)
+    {
+        require("connect_database.php");
+        $sql="SELECT * FROM ใบเสนอ  
+        $result=$conn->query($sql);
+        while($my_row=$result->fetch_assoc())
+        {
+            $date = $my_row[date];
+            $con_payment = $my_row[con_payment];
+            $เงื่อนไข = $my_row[เงื่อนไข];
+            $stock_id1 = $my_row[stock_id1 ];
+            $n_staff = $my_row[n_staff];
+            $n_customer = $my_row[n_customer];
+            $n_pid = $my_row[n_pid];
+            $n_pcolor = $my_row[n_pcolor ];
+            $n_pจำนวน = $my_row[n_pจำนวน];
+            $n_pscreen = $my_row[n_pscreen];
+            $no1 = $my_row[no1];
+          }
+        require("connection_close.php");
+        return new detailOrder($date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1);
     }
 }
 
