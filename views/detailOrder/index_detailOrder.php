@@ -3,7 +3,7 @@ new detailOrder <a href=?controller=detailOrder&action=newdetailOrder> click</a>
 
 <form method="get" action="">
         <input type="text" name="key">
-        <input type="hidden" name="controller" value="detailOrder" />
+        <input type="hidden" name="controller" value="detailOrder" >
         <button type="submit" name="action" value="search"> Search </button>
     </form>
 
