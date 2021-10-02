@@ -5,18 +5,19 @@
     <label>วันที่ทำการสั่งซื้อ  <input type="date" name="date" value="<?php echo date("Y-m-d");?>"/></label><br>
     
     <label>รหัสพนักงาน   <select name="s_id">
-    <?php foreach($staff_List as $s)
+    <?php foreach($staffList as $s)
     {
-        echo "<option value=$s->id > $s->id</option>";
+        echo "<option value=$s->s_id > $s->s_id</option>";
     }?>
     </select></label><br>
 
     <label>รหัสลูกค้า  <select name="c_id">
-    <?php foreach($customer_id as $c)
+    <?php foreach($customerList as $c)
     {
-        echo "<option value=$c->id > $c->id</option>";
+        echo "<option value=$c->c_id >$c->c_id</option>";
     }?>
     </select></label><br>
+    
 
     <label>เการรออนุมัติ  <input type="text" name="เงื่อนไข"/></label><br>
     
