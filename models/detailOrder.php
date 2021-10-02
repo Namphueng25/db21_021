@@ -70,10 +70,10 @@
             $n_pscreen = $my_row[n_pscreen];
             $no1 = $my_row[no1];
 
-            $detailOrderList[] = new detailOrder($date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1);
+            $detailOrder_List[] = new detailOrder($date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1);
         }
         require("connection_close.php");
-        return $detailOrderList;
+        return $detailOrder_List;
 
     }
 }
