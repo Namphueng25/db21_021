@@ -1,6 +1,6 @@
 <?php
 $controllers = array('pages'=>['home','error'],
-                        'order'=>['index','newOrder','search'],
+                        'order'=>['index','newOrder','search','addOrder','delete','deleteConform'],
                         'detailOrder'=>['index','search']);
 
 function call($controller,$action){
@@ -12,6 +12,8 @@ function call($controller,$action){
                         break;
 
         case "order":   require_once("./models/order.php");
+                        require_once("./models/customer.php");
+                        require_once("./models/staff.php");
                         $controller = new OrderController();
                         break;
                         
