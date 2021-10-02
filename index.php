@@ -13,9 +13,12 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
     <head></head>
     <body>
         <?php echo "controller= ".$controller.",action=".$action;?>
-        <br>[<a href="?controller=pages&action=home">home</a>]
-        [<a href="?controller=order&action=index">order</a>]
-      [<a href="?controller=detailOrder&action=index">detailOrder</a>]<br>
+        <br>
+        <a href="http://158.108.207.4/db21/">(*--*)ปล่อยมันไป อย่างที่เป็น~~~</a>
+        &nbsp; [<a href="?controller=pages&action=home">home</a>]
+        &nbsp; [<a href="?controller=order&action=index">order</a>]
+        &nbsp; [<a href="?controller=detailOrder&action=index">detailOrder</a>]
+      <br>
     
          
         <?php require_once("./routes.php");?>
