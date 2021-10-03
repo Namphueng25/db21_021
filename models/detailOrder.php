@@ -99,7 +99,7 @@
     public static function get($id)
     {
         require("connect_database.php");
-        $sql="SELECT * FROM ใบเสนอ  WHERE ( stock_id1 like '%$key%' or n_staff like '%$key%' or n_customer like '%$key%' or n_pid like '%$key%' or no1 like '%$key%')";
+        $sql="SELECT * FROM ใบเสนอ WHERE no_id = '$id' ";
        
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
