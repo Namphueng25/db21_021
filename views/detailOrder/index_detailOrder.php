@@ -32,7 +32,7 @@ new detailOrder <a href=?controller=detailOrder&action=newdetailOrder> click</a>
         <td>$detailOrder->n_pscreen</td>
         <td>$detailOrder->no1</td>
         <td><a href=?controller=detailOrder&action=updateForm&no_id=$detailOrder->no_id>update</a></td>
-        <td><a href=?controller=detailOrder&action=deleteConFirm&no_id=$detailOrder->no_id>update</a></td>
+        <td><a href=?controller=detailOrder&action=deleteConFirm&no_id=$detailOrder->no_id>delete</a></td>
 }
 echo "</table>";
 ?>
