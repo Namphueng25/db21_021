@@ -49,7 +49,7 @@
     value="<?php echo $detailOrder->n_pscreen;?>"/></label><br>
 
     <label>รหัสใบเสนอราคา <select name="id_order">
-    <?php foreach($detailOrdertList as $i) {
+    <?php foreach($ordertList as $i) {
         echo "<option value = $i->id_order";
         if($i->id_order==$detailOrder->id_order){echo " selected='selected'";}
          echo ">$i->id_order</option>";}?>
