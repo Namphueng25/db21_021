@@ -1,6 +1,7 @@
 <?php class detailOrderController{
     public function index()
     {
+        echo "hi";
         $detailOrder_List=detailOrder::getAll();
         require_once("./views/detailOrder/index_detailOrder.php");
     }
