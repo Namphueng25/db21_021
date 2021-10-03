@@ -17,8 +17,7 @@ function call($controller,$action){
                         $controller = new OrderController();
                         break;
                         
-        case "detailOrder":      echo "hi";
-                                require_once("./models/order.php");
+        case "detailOrder":     require_once("./models/order.php");
                                 require_once("./models/detailOrder.php");
                               require_once("./models/customer.php");
                               require_once("./models/staff.php");
