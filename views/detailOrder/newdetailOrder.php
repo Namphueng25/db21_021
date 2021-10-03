@@ -48,7 +48,7 @@
 
     <input type="hidden" name="controller" value="detailOrder"/><br>
     <button type="submit" name="action" value="index">Back</button>
-    <button type="submit" name="action" value="addOrder">Save</button>
+    <button type="submit" name="action" value="adddetailOrder">Save</button>
 </form>
 
 
