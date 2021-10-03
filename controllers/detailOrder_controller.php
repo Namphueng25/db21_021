@@ -4,7 +4,14 @@
         $detailOrder_List=detailOrder::getAll();
         require_once("./views/detailOrder/index_detailOrder.php");
     }
-
+    public function newOrder(){
+        
+        $customerList = customer::getAll();
+        $staffList = staff::getAll();
+        $colorproductList = colorproduct::getAll();
+        $productList = product::getAll();
+        require_once('./views/detailOrder/newdetailOrder.php');
+    }
     public function search()
     {
         $key = $_GET['key'];
