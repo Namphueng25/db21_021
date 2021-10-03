@@ -31,7 +31,7 @@ new detailOrder <a href=?controller=detailOrder&action=newdetailOrder> click</a>
         <td>$detailOrder->n_pจำนวน</td>
         <td>$detailOrder->n_pscreen</td>
         <td>$detailOrder->no1</td>
-        <td><a href=?controller=detailOrder&action=updateForm&id=$detailOrder->id>update</a></td>
+        <td><a href=?controller=detailOrder&action=updateForm&id=$detailOrder->no_id>update</a></td>
         <td>update</td><td>delete</td></tr>";
 }
 echo "</table>";
