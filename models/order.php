@@ -106,6 +106,17 @@
         return new Order($id_order,$date,$condition,$c_Fname,$id_cus,$Staff_id,$เงื่อนไข);
 
     }
+
+
+    public static function Update($id_order,$date,$c_id,$s_id,$condition,$เงื่อนไข,$oldid)
+     {
+        require("connect_database.php");
+        $sql="UPDATE `quotation` SET `id_order`='$id_order',`date`='$date',
+        `c_id`='$c_id',`s_id`='$s_id',`condition`='$condition',`เงื่อนไข`='$เงื่อนไข' WHERE id_order = '$oldid'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return ;
+     }
     public static function delete($id)
 
     {
@@ -121,6 +132,7 @@
         return ;
 
     }
+
 
 
 
