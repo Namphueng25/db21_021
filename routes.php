@@ -1,6 +1,6 @@
 <?php
 $controllers = array('pages'=>['home','error'],
-                        'order'=>['index','newOrder','search','addOrder','delete','deleteConform','updateForm'],
+                        'order'=>['index','newOrder','search','addOrder','delete','deleteConform','updateForm','update'],
                         'detailOrder'=>['index','search']);
 
 function call($controller,$action){
