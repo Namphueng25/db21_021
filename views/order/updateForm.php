@@ -1,4 +1,15 @@
-<form method="GET" action="">
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<center><font size = "6" >
+<body><form method="GET" action="">
 <label>รหัส <input type="text" name="id_order" 
         value="<?php echo $order->id_order;?>"/></label><br>
 
@@ -32,4 +43,4 @@
 <button type= "submit"name="action"value="index">Back</button>
 <button type= "submit"name="action"value="update">Update</button>
 
-</form>
+</form></body></font></center>
