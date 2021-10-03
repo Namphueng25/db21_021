@@ -35,7 +35,8 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
      <a class="button" href="?controller=order&action=index">ORDER</a>
      <a class="button" href="?controller=detailOrder&action=index">detailOrder</a>
         </p> 
-         
+       
         <?php require_once("./routes.php");?>
         </head>
 </html>
+
