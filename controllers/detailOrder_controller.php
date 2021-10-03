@@ -13,6 +13,23 @@
         $orderList = Order::getAll();
         require_once('./views/detailOrder/newdetailOrder.php');
     }
+    public function adddetailOrder()
+    {
+        
+        $date = $_GET['date'];
+        $con_payment = $_GET['con_payment']; 
+        $เงื่อนไข = $_GET['เงื่อนไข'];
+        $stock_id1 = $_GET['stock_id1'];
+        $s_id = $_GET['s_id'];
+        $c_id = $_GET['c_id'];
+        $p_id = $_GET['p_id'];
+        $cp_color = $_GET['cp_color'];
+        $n_pจำนวน = $_GET['n_pจำนวน'];
+        $n_pscreen = $_GET['n_pscreen'];
+        $id_order = $_GET['id_order'];
+        Order::Add($date,$con_payment,$เงื่อนไข,$stock_id1,$s_id,$c_id,$p_id,$cp_color,$n_pจำนวน,$n_pscreen,$id_order);
+        OrderController::index();
+    }
     public function search()
     {
         $key = $_GET['key'];
