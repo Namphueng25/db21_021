@@ -11,8 +11,9 @@
      public $n_pscreen;
      public $no1;
 
-     public function __construct($date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1)
+     public function __construct($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1)
     {
+        $this->no_id = $no_id;
         $this->date = $date;
         $this->con_payment = $con_payment;
         $this->เงื่อนไข = $เงื่อนไข;
@@ -33,6 +34,7 @@
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
+            $no_id = $my_row[no_id];
             $date = $my_row[date];
             $con_payment = $my_row[con_payment];
             $เงื่อนไข = $my_row[เงื่อนไข];
@@ -45,7 +47,7 @@
             $n_pscreen = $my_row[n_pscreen];
             $no1 = $my_row[no1];
 
-            $detailOrderList[] = new detailOrder($date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1);
+            $detailOrderList[] = new detailOrder($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1);
         }
         require("connection_close.php");
         return $detailOrderList;
@@ -69,14 +71,14 @@
             $n_pจำนวน = $my_row[n_pจำนวน];
             $n_pscreen = $my_row[n_pscreen];
             $no1 = $my_row[no1];
-
-            $detailOrder_List[] = new detailOrder($date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1);
+            $no_id = $my_row[no_id];
+            $detailOrder_List[] = new detailOrder($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1);
         }
         require("connection_close.php");
         return $detailOrder_List;
 
     }
-    public static function Add($date,$con_payment,$เงื่อนไข,$stock_id1,$s_id,$c_id,$p_id,$cp_color,$n_pจำนวน,$n_pscreen,$id_order)
+    public static function Add($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$s_id,$c_id,$p_id,$cp_color,$n_pจำนวน,$n_pscreen,$id_order)
 
     { 
       echo "kkk";
@@ -84,8 +86,8 @@
 
       
 
-       $sql = "INSERT INTO `ใบเสนอ` (`date`, `con_payment`, `เงื่อนไข`, `stock_id1`, `n_staff`, `n_customer`,`n_pid`, `n_pcolor`, `n_pจำนวน`, `n_pscreen`, `no1`) 
-                            VALUES ('$date','$con_payment','$เงื่อนไข','$stock_id1','$s_id','$c_id','$p_id','$cp_color','$n_pจำนวน','$n_pscreen','$id_order')";
+       $sql = "INSERT INTO `ใบเสนอ` (`no_id`,`date`, `con_payment`, `เงื่อนไข`, `stock_id1`, `n_staff`, `n_customer`,`n_pid`, `n_pcolor`, `n_pจำนวน`, `n_pscreen`, `no1`) 
+                            VALUES ('$no_id','$date','$con_payment','$เงื่อนไข','$stock_id1','$s_id','$c_id','$p_id','$cp_color','$n_pจำนวน','$n_pscreen','$id_order')";
 
        $result = $conn->query($sql);
 
@@ -102,6 +104,7 @@
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
+            $no_id = $my_row[no_id];
             $date = $my_row[date];
             $con_payment = $my_row[con_payment];
             $เงื่อนไข = $my_row[เงื่อนไข];
@@ -115,7 +118,7 @@
             $no1 = $my_row[no1];
           }
         require("connection_close.php");
-        return new detailOrder($date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1);
+        return new detailOrder($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1);
     }
 }
 
