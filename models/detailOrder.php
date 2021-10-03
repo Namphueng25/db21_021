@@ -119,5 +119,15 @@
         require("connection_close.php");
         return new detailOrder($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1);
     }
+    public static function update($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$s_id,$c_id,$p_id,$cp_color,$n_pจำนวน,$n_pscreen,$id_order,$oldid)
+     {
+        require("connect_database.php");
+        $sql="UPDATE `ใบเสนอ` SET `no_id`='$no_id',`date`='$date',
+        `con_payment`='$con_payment',`เงื่อนไข`='$เงื่อนไข',`stock_id1`='$stock_id1',`n_staff`='$s_id',`n_customer`='$c_id',`n_pid`='$p_id'
+        ,`n_pcolor`='$cp_color',`n_pจำนวน`='$n_pจำนวน' ,`n_pscreen`='$n_pscreen',`no1`='$id_order' WHERE no_id = '$oldid'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return ;
+     }
 }
 
