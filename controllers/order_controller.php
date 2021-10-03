@@ -34,7 +34,7 @@
     public function deleteConform()
 
     {
-        echo "dcccc";
+        
 
         $id=$_GET['id_order'];
 
