@@ -85,10 +85,9 @@
     public function delete()
 
     {
-    
 
         $id=$_GET['no_id'];
-
+        echo $id;
         detailOrder::delete($id);
 
         detailOrderController::index();
