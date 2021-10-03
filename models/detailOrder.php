@@ -10,7 +10,7 @@
      public $n_pจำนวน;
      public $n_pscreen;
      public $no1;
-
+     public $no_id;
      public function __construct($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1)
     {
         $this->no_id = $no_id;
