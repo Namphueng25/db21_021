@@ -1,5 +1,6 @@
 <form method = "GET" action = "">
-    <label>วันที่ทำการสั่งซื้อ  <input type="date" name="date" value="<?php echo date("Y-m-d");?>"/></label><br>
+<label>หมายเลขใบเสนอ   <input type="number" name="no_id"/></label><br>
+<label>วันที่ทำการสั่งซื้อ  <input type="date" name="date" value="<?php echo date("Y-m-d");?>"/></label><br>
 
     <label>เปอร์เซ็นต์มัดจำ   <input type="number" name="con_payment"/></label><br>
 
