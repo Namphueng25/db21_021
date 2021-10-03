@@ -16,7 +16,7 @@
     public function adddetailOrder()
     {
         
-        
+        $no_id = $_GET['no_id'];
         $date = $_GET['date'];
         $con_payment = $_GET['con_payment']; 
         $เงื่อนไข = $_GET['เงื่อนไข'];
@@ -41,8 +41,8 @@
         echo $n_pscreen; 
         echo $id_order ;
 
-        
-        detailOrder::Add($date,$con_payment,$เงื่อนไข,$stock_id1,$s_id,$c_id,$p_id,$cp_color,$n_pจำนวน,$n_pscreen,$id_order);
+
+        detailOrder::Add($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$s_id,$c_id,$p_id,$cp_color,$n_pจำนวน,$n_pscreen,$id_order);
         detailOrderController::index();
     }
     public function search()
