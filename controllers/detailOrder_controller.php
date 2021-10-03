@@ -41,8 +41,7 @@
     }
     public function updateForm()
     {
-        echo "hi";
-        $id = $_GET['id'];
+        $id = $_GET['no_id'];
         $detailOrder_List = detailOrder_List::get($id);
         $customerList = customer::getAll();
         $staffList = staff::getAll();
