@@ -81,7 +81,7 @@
     public static function Add($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$s_id,$c_id,$p_id,$cp_color,$n_pจำนวน,$n_pscreen,$id_order)
 
     { 
-      echo "kkk";
+
        require("connect_database.php");
 
       
