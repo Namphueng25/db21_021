@@ -79,7 +79,7 @@
         $colorproductList = colorproduct::getAll();
         $productList = product::getAll();
         $orderList = Order::getAll();
-        require_once("./views/detailOrder/deleteConForm.php");
+        require_once("./views/detailOrder/deleteConFirm.php");
     }
     public function delete()
 
