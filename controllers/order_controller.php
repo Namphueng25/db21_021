@@ -5,7 +5,7 @@
         require_once("./views/order/index_order.php");
     }
     public function newOrder(){
-        echo "hi";
+        
         $customerList = customer::getAll();
         $staffList = staff::getAll();
         require_once('./views/order/newOrder.php');
@@ -59,9 +59,8 @@
     
     public function updateForm()
     {
-        echo "uiui";
+        
         $id=$_GET['id_order'];
-        echo "$id";
         $order = Order::get($id);
         $staffList = staff::getAll();
         $customerList = customer::getAll();
@@ -80,13 +79,7 @@
         $condition=$_GET['condition'];
         $เงื่อนไข=$_GET['เงื่อนไข'];
         $oldid=$_GET['oldid'];
-        echo $id_order;
-        echo $date;
-        echo $c_id;
-        echo $s_id;
-        echo $condition;
-        echo $เงื่อนไข;
-        echo $oldid;
+    
         Order::Update($id_order,$date,$c_id,$s_id,$condition,$เงื่อนไข,$oldid);
 
         OrderController::index();
