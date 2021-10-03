@@ -4,7 +4,7 @@
         $detailOrder_List=detailOrder::getAll();
         require_once("./views/detailOrder/index_detailOrder.php");
     }
-    public function newOrder(){
+    public function newdetailOrder(){
         
         $customerList = customer::getAll();
         $staffList = staff::getAll();
