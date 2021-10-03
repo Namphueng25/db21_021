@@ -10,7 +10,7 @@
 
     <input type="hidden" name="controller" value="detailOrder" />
 
-    <input type="hidden" name="no_id" value="<?php echo $detailOrder->no1; ?>" />
+    <input type="hidden" name="no_id" value="<?php echo $detailOrder->no_id; ?>" />
 
     <button type="submit" name="action" value="index">back</button>
 
