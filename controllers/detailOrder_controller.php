@@ -70,8 +70,29 @@
         detailOrderController::index();
         
     }
+    public function deleteConFirm()
+    {
+        $id = $_GET['no_id'];
+        $detailOrder = detailOrder::get($id);
+        $customerList = customer::getAll();
+        $staffList = staff::getAll();
+        $colorproductList = colorproduct::getAll();
+        $productList = product::getAll();
+        $orderList = Order::getAll();
+        require_once("./views/detailOrder/deleteConForm.php");
+    }
+    public function delete()
 
+    {
+    
 
+        $id=$_GET['no_id'];
+
+        detailOrder::delete($id);
+
+        detailOrderController::index();
+
+    }
 
 }
 ?>
