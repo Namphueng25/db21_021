@@ -20,6 +20,8 @@ function call($controller,$action){
         case "detailOrder":   require_once("./models/detailOrder.php");
                               require_once("./models/customer.php");
                               require_once("./models/staff.php");
+                              require_once("./models/product.php");
+                              require_once("./models/ColorProduct.php");
                         $controller = new detailOrderController();
                         break;
 
