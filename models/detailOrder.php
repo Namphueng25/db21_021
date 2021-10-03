@@ -100,9 +100,9 @@
     {
         require("connect_database.php");
         $sql="SELECT * FROM ใบเสนอ WHERE no_id = '$id' ";
-       
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
+
             $no_id = $my_row[no_id];
             $date = $my_row[date];
             $con_payment = $my_row[con_payment];
