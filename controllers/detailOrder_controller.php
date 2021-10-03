@@ -65,7 +65,8 @@
         $n_pจำนวน = $_GET['n_pจำนวน'];
         $n_pscreen = $_GET['n_pscreen'];
         $id_order = $_GET['id_order'];
-        detailOrder::update($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$s_id,$c_id,$p_id,$cp_color,$n_pจำนวน,$n_pscreen,$id_order);
+        $oldid = $_GET['oldid'];
+        detailOrder::update($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$s_id,$c_id,$p_id,$cp_color,$n_pจำนวน,$n_pscreen,$id_order,$oldid);
         detailOrderController::index();
         
     }
