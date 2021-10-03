@@ -1,4 +1,4 @@
-<form method="get" action="">
+<ceter><form method="get" action="">
 <label>date <input type="date" name="date"
         value="<?php echo $detailOrder->date;?>"/></label><br>
 
