@@ -129,7 +129,21 @@
         require("connection_close.php");
         return ;
      }
+     public static function delete($id)
 
+    {
+
+        require("connect_database.php");
+
+        $sql = "DELETE FROM ใบเสนอ WHERE no_id = '$id'";
+
+        $result = $conn->query($sql);
+
+        require("connection_close.php");
+
+        return ;
+
+    }
 
 
 }
