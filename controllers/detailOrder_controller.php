@@ -53,14 +53,19 @@
     }
     public function update()
     {
+        $no_id = $_GET['no_id'];
         $date = $_GET['date'];
-        $no1 = $_GET['no1'];
-        $n_pid = $_GET['n_pid'];
+        $con_payment = $_GET['con_payment']; 
         $เงื่อนไข = $_GET['เงื่อนไข'];
-        $con_payment = $_GET['con_payment'];
-        $n_staff = $_GET['n_staff'];
-        $n_customer = $_GET['n_customer'];
-        detailOrder::update($date,$no1,$n_pid,$เงื่อนไข,$con_payment,$n_staff,$n_customer);
+        $stock_id1 = $_GET['stock_id1'];
+        $s_id = $_GET['s_id'];
+        $c_id = $_GET['c_id'];
+        $p_id = $_GET['p_id'];
+        $cp_color = $_GET['cp_color'];
+        $n_pจำนวน = $_GET['n_pจำนวน'];
+        $n_pscreen = $_GET['n_pscreen'];
+        $id_order = $_GET['id_order'];
+        detailOrder::update($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$s_id,$c_id,$p_id,$cp_color,$n_pจำนวน,$n_pscreen,$id_order);
         detailOrderController::index();
         
     }
