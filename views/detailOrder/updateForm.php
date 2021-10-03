@@ -51,8 +51,8 @@
     <label>รหัสใบเสนอราคา <select name="id_order">
     <?php foreach($ordertList as $i) {
         echo "<option value = $i->id_order";
-        if($i->id_order==$detailOrder->id_order){echo " selected='selected'";}
-         echo ">$i->id_order</option>";}?>
+        if($i->id_order==$detailOrder->no1){echo " selected='selected'";}
+         echo ">$i->no1</option>";}?>
     </select></label><br> 
 
     <input type="hidden"name="controller"value="detailOrder"/>
