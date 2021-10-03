@@ -39,7 +39,12 @@
     
     <label>จำนวนสกีน  <input type="number" name="n_pscreen"/></label><br>
 
-    <label>รหัสใบเสนอราคา  <input type="number" name="no1"/></label><br>
+    <label>รหัสใบเสนอราคา  <select name="id_order">
+    <?php foreach($orderList as $i)
+    {
+        echo "<option value=$i->id_order >$i->id_order</option>";
+    }?>
+    </select></label><br>
 
     <input type="hidden" name="controller" value="detailOrder"/><br>
     <button type="submit" name="action" value="index">Back</button>
