@@ -102,8 +102,7 @@
         $sql="SELECT * FROM ใบเสนอ WHERE no_id = '$id' ";
        
         $result=$conn->query($sql);
-        while($my_row=$result->fetch_assoc())
-        {
+        $my_row=$result->fetch_assoc();
             $no_id = $my_row[no_id];
             $date = $my_row[date];
             $con_payment = $my_row[con_payment];
@@ -116,7 +115,7 @@
             $n_pจำนวน = $my_row[n_pจำนวน];
             $n_pscreen = $my_row[n_pscreen];
             $no1 = $my_row[no1];
-          }
+          
         require("connection_close.php");
         return new detailOrder($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$n_staff,$n_customer,$n_pid,$n_pcolor,$n_pจำนวน,$n_pscreen,$no1);
     }
