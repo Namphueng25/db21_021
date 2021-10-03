@@ -76,6 +76,23 @@
         return $detailOrder_List;
 
     }
+    public static function Add($date,$con_payment,$เงื่อนไข,$stock_id1,$s_id,$c_id,$p_id,$cp_color,$n_pจำนวน,$n_pscreen,$id_order)
+
+    { 
+
+       require("connect_database.php");
+
+      
+
+       $sql = "INSERT INTO `ใบเสนอ` (`date`, `con_payment`, `เงื่อนไข`, `stock_id1`, `n_staff`, `n_customer`,`n_pid`, `n_pcolor`, `n_pจำนวน`, `n_pscreen`, `no1`) VALUES ('$date','$con_payment','$เงื่อนไข','$stock_id1','$s_id','$c_id','$p_id','$cp_color','$n_pจำนวน','$n_pscreen','$id_order')";
+
+       $result = $conn->query($sql);
+
+       require("connection_close.php");
+
+       return  ;
+
+    }
     public static function get($id)
     {
         require("connect_database.php");
