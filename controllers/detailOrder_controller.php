@@ -10,6 +10,7 @@
         $staffList = staff::getAll();
         $colorproductList = colorproduct::getAll();
         $productList = product::getAll();
+        $orderList = Order::getAll();
         require_once('./views/detailOrder/newdetailOrder.php');
     }
     public function search()
