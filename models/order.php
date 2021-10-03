@@ -111,8 +111,8 @@
     public static function Update($id_order,$date,$c_id,$s_id,$condition,$เงื่อนไข,$oldid)
      {
         require("connect_database.php");
-        $sql="UPDATE `quotation` SET `id_order`='$id_order',`date`='$date',
-        `c_id`='$c_id',`s_id`='$s_id',`condition`='$condition',`เงื่อนไข`='$เงื่อนไข' WHERE id_order = '$oldid'";
+        $sql="UPDATE `customer_order` SET `id_order`='$id_order',`date`='$date',
+        `id_cus`='$c_id',`Staff_id`='$s_id',`condition`='$condition',`เงื่อนไข`='$เงื่อนไข' WHERE id_order = '$oldid'";
         $result=$conn->query($sql);
         require("connection_close.php");
         return ;
