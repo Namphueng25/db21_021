@@ -16,6 +16,7 @@
     public function adddetailOrder()
     {
         
+        echo "ffff";
         $date = $_GET['date'];
         $con_payment = $_GET['con_payment']; 
         $เงื่อนไข = $_GET['เงื่อนไข'];
