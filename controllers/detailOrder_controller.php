@@ -29,18 +29,6 @@
         $n_pscreen = $_GET['n_pscreen'];
         $id_order = $_GET['id_order'];
 
-        echo $date ;
-        echo $con_payment ;
-        echo $เงื่อนไข;
-        echo $stock_id1 ;
-        echo $s_id ;
-        echo $c_id ;
-        echo $p_id ;
-        echo $cp_color; 
-        echo $n_pจำนวน ;
-        echo $n_pscreen; 
-        echo $id_order ;
-        echo $no_id;
 
         detailOrder::Add($no_id,$date,$con_payment,$เงื่อนไข,$stock_id1,$s_id,$c_id,$p_id,$cp_color,$n_pจำนวน,$n_pscreen,$id_order);
         detailOrderController::index();
@@ -55,7 +43,7 @@
     {
         echo "hi";
         $id = $_GET['id'];
-        //$detailOrder_List = detailOrder_List::get($id);
+        $detailOrder_List = detailOrder_List::get($id);
         $customerList = customer::getAll();
         $staffList = staff::getAll();
         $colorproductList = colorproduct::getAll();
