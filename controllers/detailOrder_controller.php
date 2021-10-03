@@ -55,7 +55,12 @@
     {
         $id = $_GET['id'];
         $detailOrder_List = detailOrder_List::get($id);
-       
+        $customerList = customer::getAll();
+        $staffList = staff::getAll();
+        $colorproductList = colorproduct::getAll();
+        $productList = product::getAll();
+        $orderList = Order::getAll();
+        
         require_once("./views/detailOrder/updateForm.php");
     }
     public function update()
