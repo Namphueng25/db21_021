@@ -91,5 +91,5 @@ new detailOrder <a href=?controller=detailOrder&action=newdetailOrder> click</a>
 </body>
 <br>
 <br>
-<center><font size = "4" color = "black">BY น.ส.รสริน 6220504763 </font></center>
+<center><font size = "4" color = "black">BY น.ส.รสริน เณรแตง 6220504763 </font></center>
 </html>
