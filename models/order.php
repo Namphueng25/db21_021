@@ -7,9 +7,9 @@
      public $Staff_id;
      public $เงื่อนไข;
      public $c_Fname;
+     public $s_name;
 
-
-    public function __construct($id_order,$date,$condition,$c_Fname,$id_cus,$Staff_id,$เงื่อนไข)
+    public function __construct($id_order,$date,$condition,$c_Fname,$id_cus,$s_name,$Staff_id,$เงื่อนไข)
     {
         $this->id_order = $id_order;
         $this->date = $date;
@@ -18,7 +18,7 @@
         $this->Staff_id = $Staff_id;
         $this->เงื่อนไข = $เงื่อนไข;
         $this->c_Fname = $c_Fname;
-
+        $this->s_name = $s_name;
     }
     public static function getAll()
     {
@@ -35,8 +35,8 @@
             $Staff_id = $my_row[Staff_id];
             $เงื่อนไข = $my_row[เงื่อนไข];
             $c_Fname = $my_row[c_Fname];
-            
-            $orderList[] = new Order($id_order,$date,$condition,$c_Fname,$id_cus,$Staff_id,$เงื่อนไข);
+            $s_name = $s_name[s_name];
+            $orderList[] = new Order($id_order,$date,$condition,$c_Fname,$id_cus,$s_name,$Staff_id,$เงื่อนไข);
         }
         require("connection_close.php");
         return $orderList;
@@ -75,8 +75,8 @@
             $Staff_id = $my_row[Staff_id];
             $เงื่อนไข = $my_row[เงื่อนไข];
             $c_Fname = $my_row[c_Fname];
-
-            $orderList[] = new Order($id_order,$date,$condition,$c_Fname,$id_cus,$Staff_id,$เงื่อนไข);
+            $s_name = $s_name[s_name];
+            $orderList[] = new Order($id_order,$date,$condition,$c_Fname,$id_cus,$s_name,$Staff_id,$เงื่อนไข);
         }
         require("connection_close.php");
         return $orderList;
@@ -99,11 +99,11 @@
             $Staff_id = $my_row[Staff_id];
             $เงื่อนไข = $my_row[เงื่อนไข];
             $c_Fname = $my_row[c_Fname];
-            
+            $s_name = $s_name[s_name];
            
         
         require("connection_close.php");
-        return new Order($id_order,$date,$condition,$c_Fname,$id_cus,$Staff_id,$เงื่อนไข);
+        return new Order($id_order,$date,$condition,$c_Fname,$id_cus,$s_name,$Staff_id,$เงื่อนไข);
 
     }
 
