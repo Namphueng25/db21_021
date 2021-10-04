@@ -37,7 +37,7 @@
 
     <label>สี <select name="cp_color">
     <?php foreach($colorproductList as $co) {
-        echo "<option value = $p->cp_color";
+        echo "<option value = $co->cp_color";
         if($co->cp_color==$detailOrder->cp_color){echo " selected='selected'";}
          echo ">$co->cp_color</option>";}?>
     </select></label><br> 
