@@ -62,6 +62,7 @@
         $s_id = $_GET['s_id'];
         $c_id = $_GET['c_id'];
         $p_id = $_GET['p_id'];
+       
         $cp_color = $_GET['cp_color'];
         $n_pจำนวน = $_GET['n_pจำนวน'];
         $n_pscreen = $_GET['n_pscreen'];
