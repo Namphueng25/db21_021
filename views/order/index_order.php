@@ -4,25 +4,27 @@
 <style>
 table {
     border-collapse: collapse;
-    width: 60%;
+    border : none;
+    width: 70%;
 }
 
 th, td {
-    text-align: left;
+    text-align: center;
     padding: 8px;
+
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
-
+tr:hover {background-color: #ccffcc}
 th {
-    background-color: #4CAF50;
+    background-color: #33cc66;
     color: white;
 }
 </style>
 
 <style>
 .button {
-    background-color: #4CAF50;
+    background-color: #33cc66;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -35,30 +37,31 @@ th {
 }
 </style>
 </head>
-<body><center>
+<body bgcolor = "#f0fff0"><center>
 
 <h2><center>ORDER TABLE</center></h2>
 
 
-<table border=1>
+<table border=1 >
 
 
 <form method="get" action="">
-        <input type="text" name="key">
-        <input type="hidden" name="controller" value="order" />
-        <button type="submit" name="action" value="search"> Search </button></br>
+        <input type="text" name="key" size = "30">
+        <input type="hidden" name="controller" value="order"  />
+        <button type="submit" name="action" value="search"> Search </button>
+        <button type="submit" name="action" value="index">Back</button></br>
     </form>
     
 
     <br><tr>
-        <th>id_order</th>
-        <th>date</th>
-        <th>condition</th>
-        <th>id_cus</th>
-        <th>Staff_id</th>
+        <th>ID ORDER</th>
+        <th>DATE</th>
+        <th>CONDITION</th>
+        <th>ID CUSTOMER</th>
+        <th>ID STAFF</th>
         <th>เงื่อนไข</th>
-        <th>Update</th>
-        <th>Delete</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
 <?php foreach($order_List as $order)
 {
         echo "<tr><td>$order->id_order</td>
@@ -79,10 +82,13 @@ echo "</table>";
 ?>
 <br>
 </center>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a class="button" href="?controller=order&action=newOrder">Addnew</a>
+
+<center><a class="button" href="?controller=order&action=newOrder">Addnew</a></center>
 
 
 
 </body>
+<br>
+<br>
+<center><font size = "4" color = "black">BY น.ส.น้ำผึ้ง กิติกังสดาร 6220502159 </font></center>
 </html>
