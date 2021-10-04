@@ -24,19 +24,23 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
     cursor: pointer;
 }
 </style>
-    <head bgcolor="Gray">
-    <h2><font size = "10">Premiumshop</font></h2>
-        <?php echo "controller= ".$controller.",action=".$action;?>
-        
-        <p align = "right">
+    <head color = "#000000">
+    <br>
+    <br>
+    <br>
+    <h2><center><font size = "10" >Premiumshop</font></center></h2>
+    </head> 
+      <body>
+        <p align = "center">
 
      <a class="button" href="http://158.108.207.4/db21/">ปล่อยมันไป อย่างที่เป็น~~~</a>
      <a class="button" href="?controller=pages&action=home">HOME</a>
      <a class="button" href="?controller=order&action=index">ORDER</a>
-     <a class="button" href="?controller=detailOrder&action=index">detailOrder</a>
+     <a class="button" href="?controller=detailOrder&action=index">DETAIL ORDER</a>
+     
         </p> 
        
         <?php require_once("./routes.php");?>
-        </head>
+        </body>  
 </html>
 
