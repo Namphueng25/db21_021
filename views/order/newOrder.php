@@ -1,3 +1,5 @@
+<center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUO6ad442Z5ebYopUDS4w_gtSQaP5f4s-tUNuqHZSe_2h7ePuYXrRLH_fOLyK21mboiHY&usqp=CAU"   ></center>
+<center><font size = "5">
 <form method = "GET" action = "">
 
     <label>เลขใบสั่งซื้อ  <input type="text" name="id"/></label><br>
@@ -19,12 +21,12 @@
     </select></label><br>
     
 
-    <label>เการรออนุมัติ  <input type="text" name="เงื่อนไข"/></label><br>
+    <label>การรออนุมัติ  <input type="text" name="เงื่อนไข"/></label><br>
     
     <label>เปอร์เซ็นต์มัดจำ   <input type="number" name="condition"/></label><br>
 
     <input type="hidden" name="controller" value="order"/><br>
     <button type="submit" name="action" value="index">Back</button>
     <button type="submit" name="action" value="addOrder">Save</button>
-</form>
+</form></center>
 
