@@ -2,13 +2,10 @@
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<center><font size = "6" >
+
+<center><img src="https://docs.cocos.com/creator/2.2/manual/en/advanced-topics/hot-update/title.jpg" width ="300" height ="175"  ></center>
+
+<center><font size = "5" >
 <body><form method="GET" action="">
 <label>รหัส <input type="text" name="id_order" 
         value="<?php echo $order->id_order;?>"/></label><br>
@@ -17,7 +14,7 @@
 <label>วันที่ <input type="date" name="date"
         value="<?php echo $order->date;?>"/></label><br>
 
-<label>ชื่อลูกค้า <select name="c_id">
+<label>รหัสลูกค้า <select name="c_id">
     <?php foreach($customerList as $c) {
         echo "<option value = $c->c_id";
         if($c->c_id==$order->c_id){echo " selected='selected'";}
